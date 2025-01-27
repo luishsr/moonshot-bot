@@ -1,0 +1,16 @@
+curl -X POST \
+  http://localhost:3000/api/trading/prepare \
+  -H "Content-Type: application/json" \
+  -d '{
+    "userWallet": "J2b1NQSZi4eLykHFtJAtTVCGXGmmdM8D27RciDZ7rDZz",
+    "tradeType": "buy",
+    "amount": 1000
+  }'
+
+curl -X POST \
+  http://localhost:3000/api/trading/submit \
+  -H "Content-Type: application/json" \
+  -d '{
+    "signedTx": "SIGNED_TX_BASE64"
+  }'
+
